@@ -5,11 +5,13 @@ import Footer from "./Components/Footer";
 
 const App: React.FC = () => {
   return (
-    <main className="w-full h-[100vh] font-mono">
-      <Heading />
-      <FlipSpace />
+    <div className="flex flex-col min-h-screen">
+      <main className="flex-grow">
+        <Heading />
+        <FlipSpace />
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 };
 
