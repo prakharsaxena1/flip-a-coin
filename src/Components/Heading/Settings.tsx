@@ -6,32 +6,27 @@ const Settings: React.FC = () => {
 
   return (
     <>
-      <span className="text-xl">Enter your decisions</span>
-      <div className="flex flex-col gap-1 m-2 w-full max-w-[500px] p-1">
-        <div className="flex min-w-[200px] w-full items-center">
-          <span className="text-lg font-semibold cursor-pointer mx-2 w-[100px]">
-            Heads
-          </span>
+      <div className="flex flex-col gap-2 m-2 w-full max-w-[500px] p-1">
+        <div className="min-w-[200px] w-full items-center relative">
           <input
-            className="transition-colors delay-100 p-1 rounded-sm outline-none text-slate-950 bg-zinc-100 dark:bg-slate-700 dark:text-slate-100 w-full"
+            className="transition-colors delay-100 p-2 rounded-sm outline-none text-slate-950 bg-zinc-50 dark:bg-slate-700 dark:text-slate-100 w-full text-center"
             type="text"
+            placeholder="Enter your decision for heads"
             value={headsText}
             onChange={(e) => setHeadsText(e.target.value)}
           />
         </div>
-        <div className="flex min-w-[200px] w-full items-center">
-          <span className="text-lg font-semibold cursor-pointer mx-2 w-[100px]">
-            Tails
-          </span>
+        <div className="min-w-[200px] w-full items-center relative">
           <input
-            className="transition-colors delay-100 p-1 rounded-sm outline-none text-slate-950 bg-zinc-100 dark:bg-slate-700 dark:text-slate-100 w-full"
+            className="transition-colors delay-100 p-2 rounded-sm outline-none text-slate-950 bg-zinc-50 dark:bg-slate-700 dark:text-slate-100 w-full text-center"
             type="text"
+            placeholder="Enter your decision for tails"
             value={tailsText}
             onChange={(e) => setTailsText(e.target.value)}
           />
         </div>
       </div>
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-row gap-2">
         <button
           disabled={isFlipping}
           onClick={() => swapText()}
